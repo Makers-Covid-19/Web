@@ -6,7 +6,7 @@
       <h4>
         Şehir seçmeden devam etmek için butona tıkla.
       </h4>
-      <router-link class="btn btn-danger" :to="{ name: 'Phones', params: { id: id } }">Numaraları Göster</router-link>
+      <router-link class="btn btn-danger" :to="{ name: 'Phones', params: { id: this.id } }">Numaraları Göster</router-link>
       <br><br>
       <div v-for="data in datas">
         <router-link :to="{ name: 'Neighborhoods', params: { id: data.id } }">{{ data.name }}</router-link>
@@ -31,6 +31,7 @@
     watch: {
       '$route'(to, from) {
         this.id = to.params.id;
+        console.log(this.id);
       },
     },
 
