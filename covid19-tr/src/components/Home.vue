@@ -10,7 +10,8 @@
       <label>İlçeyi Seç</label>
       <v-select :options="optionsDistricts" v-model="districts" placeholder="Zorunlu Değil"></v-select>
       <br>
-      <button class="btn btn-danger" @click="getNumber">Onay</button>
+      <label>Mahalleyi Seç</label>
+      <v-select :options="optionsNeighborhoods" v-model="neighborhoods" placeholder="Zorunlu Değil"></v-select>
       <br><br>
       <div v-for="data in datasPhone">
         <div class="card">
@@ -36,11 +37,14 @@
       return {
         datasProvince: {},
         datasDistricts: {},
+        datasNeighborhoods: {},
         datasPhone: {},
         province: "",
         districts: "",
+        neighborhoods: "",
         optionsProvince: [],
         optionsDistricts: [],
+        optionsNeighborhoods: [],
         id: 0,
         url: "",
       }
@@ -51,15 +55,27 @@
         for (let i = 0; i <= this.datasProvince.length - 1; i++) {
           if (this.datasProvince[i].name == this.province) {
             this.id = i + 1;
+            console.log("********PROVİNCE********", this.id);
             this.getDistricts();
+            this.getNumber();
           }
         }
       },
       districts() {
         for (let i = 0; i <= this.datasDistricts.length - 1; i++) {
           if (this.datasDistricts[i].name == this.districts) {
-            this.id = i + 1;
-            console.log(this.id);
+            this.id = this.datasDistricts[i].id;
+            console.log("********PROVİNCE********", this.id);
+            this.getNeighborhoods();
+            this.getNumber();
+          }
+        }
+      },
+      neighborhoods() {
+        for (let i = 0; i <= this.datasNeighborhoods.length - 1; i++) {
+          if (this.datasNeighborhoods[i].name == this.neighborhoods) {
+            this.id = this.datasNeighborhoods[i].id;
+            this.getNumber();
           }
         }
       }
@@ -86,6 +102,16 @@
             this.datasDistricts = response.data.data;
             for (let i = 0; i <= this.datasDistricts.length - 1; i++) {
               this.optionsDistricts.push(this.datasDistricts[i].name);
+            }
+          });
+      },
+
+      getNeighborhoods() {
+        axios.get('https://rocky-reef-05857.herokuapp.com/api/v0/neighborhoods/' + this.id)
+          .then(response => {
+            this.datasNeighborhoods = response.data.data;
+            for (let i = 0; i <= this.datasNeighborhoods.length - 1; i++) {
+              this.optionsNeighborhoods.push(this.datasNeighborhoods[i].name);
             }
           });
       },
