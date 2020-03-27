@@ -29,15 +29,16 @@
       <div class=home-card>
         <section class="container-1">
           <div class="dropdown">
-            <select name="one" class="dropdown-select">
-              <option value="" v-for="option in optionsProvince">{{ option }}</option>
+            <select name="one" class="dropdown-select" v-model="province">
+              <option disabled value="">İl Seçin</option>
+              <option v-for="option in optionsProvince">{{ option }}</option>
             </select>
           </div>
-          <h1>{{province}}</h1>
 
           <div id="district" class="dropdown">
-            <select name="two" class="dropdown-select">
-              <option value="" v-for="option in optionsDistricts" v-model="districts">{{ option }}</option>
+            <select name="two" class="dropdown-select" v-model="districts">
+              <option disabled value="">İlçe Seçin</option>
+              <option v-for="option in optionsDistricts">{{ option }}</option>
             </select>
           </div>
         </section>
@@ -102,9 +103,7 @@
               <img src="../assets/icon_/star.svg">
             </div>
           </div>
-
           <div class="card">
-
             <div class="icon">
               <img src="../assets/icon_/psikolojikdestek.svg">
             </div>
@@ -116,88 +115,65 @@
               <img src="../assets/icon_/star.svg">
             </div>
           </div>
-
-
         </div>
-
-
       </div>
-
-
     </div>
 
     <div class="section-down">
-      <div class="number-section">
-        <p class="number-section-text">Numaralar</p>
-
-        <div class="section-down-card">
-          <div class="card-info">
-            <p class="info-p">BELEDİYE 1</p>
-            <p class="info2-p">Tüm Mahalleler</p>
-          </div>
-          <div class="card-number">
-            <p class="number-left">0505 806 77 14</p>
-          </div>
-        </div>
-
-        <div class="section-down-card">
-          <div class="card-info">
-            <p class="info-p">BELEDİYE 2</p>
-            <p class="info2-p">Tüm Mahalleler</p>
-          </div>
-          <div class="card-number">
-            <p class="number-left">0505 806 77 14</p>
-          </div>
-        </div>
-
-        <div class="section-down-card">
-          <div class="card-info">
-            <p class="info-p">BELEDİYE 3</p>
-            <p class="info2-p">Tüm Mahalleler</p>
-          </div>
-          <div class="card-number">
-            <p class="number-left">0505 806 77 14</p>
-          </div>
-        </div>
-
-      </div>
-
-
       <div class="country-section">
         <p class="country-section-text">Ülke Geneli</p>
+        <a href="tel:182">
+          <div class="section-down-card">
+            <div class="card-info">
+              <p class="info-p">Corona Danışma Hattı</p>
+              <p class="info2-p">Tüm Türkiye</p>
+            </div>
+            <div class="card-number">
+              <p class="number-left">182</p>
+            </div>
+          </div>
+        </a>
 
-        <div class="section-down-card">
-          <div class="card-info">
-            <p class="info-p">Corona Danışma Hattı</p>
-            <p class="info2-p">Tüm Türkiye</p>
+        <a href="tel:112">
+          <div class="section-down-card">
+            <div class="card-info">
+              <p class="info-p">Acil</p>
+              <p class="info2-p">Tüm Türkiye</p>
+            </div>
+            <div class="card-number">
+              <p class="number-left">112</p>
+            </div>
           </div>
-          <div class="card-number">
-            <p class="number-left">182</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="section-down-card">
-          <div class="card-info">
-            <p class="info-p">Acil</p>
-            <p class="info2-p">Tüm Türkiye</p>
+        <a href="tel:155">
+          <div class="section-down-card">
+            <div class="card-info">
+              <p class="info-p">Emniyet GM</p>
+              <p class="info2-p">Tüm Türkiye</p>
+            </div>
+            <div class="card-number">
+              <p class="number-left">155</p>
+            </div>
           </div>
-          <div class="card-number">
-            <p class="number-left">112</p>
-          </div>
-        </div>
-
-        <div class="section-down-card">
-          <div class="card-info">
-            <p class="info-p">Emniyet GM</p>
-            <p class="info2-p">Tüm Türkiye</p>
-          </div>
-          <div class="card-number">
-            <p class="number-left">155</p>
-          </div>
-        </div>
-
+        </a>
       </div>
-
+      <div class="number-section">
+        <p class="number-section-text">Numaralar</p>
+        <div v-for="data in datasPhone">
+          <a :href="`tel:+${ data.no }`">
+            <div class="section-down-card">
+              <div class="card-info">
+                <p class="info-p">{{ data.name }}</p>
+                <p class="info2-p">{{ data.no }}</p>
+              </div>
+              <div class="card-number">
+                <p class="number-left">{{ data.category.name }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
