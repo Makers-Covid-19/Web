@@ -30,7 +30,7 @@
         <section class="container-1">
           <div class="dropdown">
             <select name="one" class="dropdown-select" v-model="province">
-              <option disabled value="">İl Seçin</option>
+              <option disabled value="">--İl Seçin</option>
               <option v-for="option in optionsProvince">{{ option }}</option>
             </select>
           </div>
@@ -120,8 +120,8 @@
     </div>
 
     <div class="section-down">
-      <div class="country-section">
-        <p class="country-section-text">Ülke Geneli</p>
+      <div class="number-section">
+        <p class="number-section-text">Ülke Geneli</p>
         <a href="tel:182">
           <div class="section-down-card">
             <div class="card-info">
@@ -158,8 +158,8 @@
           </div>
         </a>
       </div>
-      <div class="number-section">
-        <p class="number-section-text">Numaralar</p>
+      <div class="country-section">
+        <p class="country-section-text">Numaralar</p>
         <div v-for="data in datasPhone">
           <a :href="`tel:+${ data.no }`">
             <div class="section-down-card">
