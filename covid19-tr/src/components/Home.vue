@@ -43,78 +43,72 @@
           </div>
         </section>
         <div class="container">
-          <div class="card">
+            <a class="card" href="tel:155">
+              <div class="icon">
+                <img src="../assets/icon_/tum_ihtiyaclar.svg">
+              </div>
+              <div class="text-number">155</div>
+              <div class="text-title">Polis İmdat</div>
+              <div class="text-thin">Emniyet</div>
+              <div class="check">
+                <img src="../assets/icon_/star.svg">
+              </div>
+            </a>
+          <a class="card" href="tel:153">
             <div class="icon">
-              <img src="../assets/icon_/tum_ihtiyaclar.svg">
+              <img src="../assets/icon_/manav.svg">
             </div>
-            <div class="text-number">444 44 44</div>
-            <div class="text-title">Tüm İhtiyaçlar</div>
-            <div class="text-thin">Büyükşehir Belediye</div>
+            <div class="text-number">153</div>
+            <div class="text-title">Alo Zabıta</div>
             <div class="text-thin">Genel Çağrı Merkezi</div>
             <div class="check">
               <img src="../assets/icon_/star.svg">
             </div>
-          </div>
-          <div class="card">
-            <div class="icon">
-              <img src="../assets/icon_/manav.svg">
-            </div>
-            <div class="text-number">444 44 44</div>
-            <div class="text-title">Manav</div>
-            <div class="text-thin">Çamlık</div>
-            <div class="text-thin">SMO</div>
-            <div class="check">
-              <img src="../assets/icon_/star.svg">
-            </div>
-          </div>
-          <div class="card">
+          </a>
+          <a class="card" href="tel:112">
             <div class="icon">
               <img src="../assets/icon_/faturalar.svg">
             </div>
-            <div class="text-number">444 44 44</div>
-            <div class="text-title">Maaş ve Faturalar</div>
-            <div class="text-thin">Tüm Mahalleler</div>
+            <div class="text-number">112</div>
+            <div class="text-title">Acil Servis</div>
+            <div class="text-thin">Sağlık</div>
+            <div class="check">
+              <img src="../assets/icon_/star.svg">
+            </div>
+          </a>
+          <a class="card" href="tel:156">
+            <div class="icon">
+              <img src="../assets/icon_/alisveris.svg">
+            </div>
+            <div class="text-number">156</div>
+            <div class="text-title">Jandarma İmdat</div>
             <div class="text-thin">Emniyet</div>
             <div class="check">
               <img src="../assets/icon_/star.svg">
             </div>
-          </div>
-          <div class="card">
-            <div class="icon">
-              <img src="../assets/icon_/alisveris.svg">
-            </div>
-            <div class="text-number">444 44 44</div>
-            <div class="text-title">Alışveris</div>
-            <div class="text-thin">Tüm Mahalleler</div>
-            <div class="text-thin">Belediye</div>
-            <div class="check">
-              <img src="../assets/icon_/star.svg">
-            </div>
-          </div>
-          <div class="card">
+          </a>
+          <a class="card" href="tel:187">
             <div class="icon">
               <img src="../assets/icon_/Koordinasyon.svg">
             </div>
-            <div class="text-number">444 44 44</div>
-            <div class="text-title">Koordinasyon</div>
-            <div class="text-thin">Tüm Mahalleler</div>
-            <div class="text-thin">Yerel İnisiyatif</div>
+            <div class="text-number">187</div>
+            <div class="text-title">Gaz Arıza</div>
+            <div class="text-thin">Emniyet</div>
             <div class="check">
               <img src="../assets/icon_/star.svg">
             </div>
-          </div>
-          <div class="card">
+          </a>
+          <a class="card" href="tel:110">
             <div class="icon">
               <img src="../assets/icon_/psikolojikdestek.svg">
             </div>
-            <div class="text-number">444 44 44</div>
-            <div class="text-title">Psikolojik Destek</div>
-            <div class="text-thin">Tüm Mahalleler</div>
-            <div class="text-thin">İlçe Sağlık Müdürlüğü</div>
+            <div class="text-number">110</div>
+            <div class="text-title">İtfaiye</div>
+            <div class="text-thin">Emniyet</div>
             <div class="check">
               <img src="../assets/icon_/star.svg">
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -122,53 +116,31 @@
     <div class="section-down">
       <div class="number-section">
         <p class="number-section-text">Ülke Geneli</p>
-        <a href="tel:182">
-          <div class="section-down-card">
-            <div class="card-info">
-              <p class="info-p">Corona Danışma Hattı</p>
-              <p class="info2-p">Tüm Türkiye</p>
-            </div>
-            <div class="card-number">
-              <p class="number-left">182</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="tel:112">
-          <div class="section-down-card">
-            <div class="card-info">
-              <p class="info-p">Acil</p>
-              <p class="info2-p">Tüm Türkiye</p>
-            </div>
-            <div class="card-number">
-              <p class="number-left">112</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="tel:155">
-          <div class="section-down-card">
-            <div class="card-info">
-              <p class="info-p">Emniyet GM</p>
-              <p class="info2-p">Tüm Türkiye</p>
-            </div>
-            <div class="card-number">
-              <p class="number-left">155</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="country-section">
-        <p class="country-section-text">Numaralar</p>
-        <div v-for="data in datasPhone">
-          <a :href="`tel:+${ data.no }`">
+        <div v-for="data in datasGlobalPhone">
+          <a :href="`tel:+${ data.phone }`">
             <div class="section-down-card">
               <div class="card-info">
                 <p class="info-p">{{ data.name }}</p>
-                <p class="info2-p">{{ data.no }}</p>
+                <p class="info2-p">{{ data.phone }}</p>
               </div>
               <div class="card-number">
-                <p class="number-left">{{ data.category.name }}</p>
+                <p class="number-left" v-if="data.category">{{ data.category.name }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="country-section" v-if="datasMajorPhone">
+        <p class="country-section-text">Numaralar</p>
+        <div v-for="data in datasMajorPhone">
+          <a :href="`tel:+${ data.phone }`">
+            <div class="section-down-card">
+              <div class="card-info">
+                <p class="info-p">{{ data.name }}</p>
+                <p class="info2-p">{{ data.phone }}</p>
+              </div>
+              <div class="card-number">
+                <p class="number-left" v-if="data.category">{{ data.category.name }}</p>
               </div>
             </div>
           </a>
@@ -189,7 +161,9 @@
         datasProvince: {},
         datasDistricts: {},
         datasNeighborhoods: {},
-        datasPhone: {},
+        datasGlobalPhone: {},
+        datasMajorPhone: {},
+        datasPublicPhone: {},
         province: "",
         districts: "",
         neighborhoods: "",
@@ -275,7 +249,10 @@
         }
         axios.get(this.url)
           .then(response => {
-            this.datasPhone = response.data.data;
+            console.log(response.data.data);
+            this.datasGlobalPhone = response.data.data.globalPhones;
+            this.datasMajorPhone = response.data.data.majorPhones;
+            this.datasPublicPhone = response.data.data.publicPhones;
           });
       }
     }
