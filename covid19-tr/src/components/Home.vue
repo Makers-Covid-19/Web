@@ -43,17 +43,17 @@
           </div>
         </section>
         <div class="container">
-            <a class="card" href="tel:155">
-              <div class="icon">
-                <img src="../assets/icon_/tum_ihtiyaclar.svg">
-              </div>
-              <div class="text-number">155</div>
-              <div class="text-title">Polis İmdat</div>
-              <div class="text-thin">Emniyet</div>
-              <div class="check">
-                <img src="../assets/icon_/star.svg">
-              </div>
-            </a>
+          <a class="card" href="tel:155">
+            <div class="icon">
+              <img src="../assets/icon_/tum_ihtiyaclar.svg">
+            </div>
+            <div class="text-number">155</div>
+            <div class="text-title">Polis İmdat</div>
+            <div class="text-thin">Emniyet</div>
+            <div class="check">
+              <img src="../assets/icon_/star.svg">
+            </div>
+          </a>
           <a class="card" href="tel:153">
             <div class="icon">
               <img src="../assets/icon_/manav.svg">
@@ -179,7 +179,7 @@
       province() {
         for (let i = 0; i <= this.datasProvince.length - 1; i++) {
           if (this.datasProvince[i].name == this.province) {
-            this.id = i + 1;
+            this.id = i;
             this.getDistricts();
             this.getNumber();
           }
@@ -210,7 +210,7 @@
 
     methods: {
       getProvinces() {
-        axios.get('https://rocky-reef-05857.herokuapp.com/api/v0/provinces')
+        axios.get('https://api.covidacil.com/api/v0/provinces')
           .then(response => {
             this.datasProvince = response.data.data;
             for (let i = 0; i <= this.datasProvince.length - 1; i++) {
@@ -220,7 +220,7 @@
       },
 
       getDistricts() {
-        axios.get('https://rocky-reef-05857.herokuapp.com/api/v0/districts/' + this.id)
+        axios.get('https://api.covidacil.com/api/v0/districts/' + this.id)
           .then(response => {
             this.datasDistricts = response.data.data;
             for (let i = 0; i <= this.datasDistricts.length - 1; i++) {
@@ -230,7 +230,7 @@
       },
 
       getNeighborhoods() {
-        axios.get('https://rocky-reef-05857.herokuapp.com/api/v0/neighborhoods/' + this.id)
+        axios.get('https://api.covidacil.com/api/v0/neighborhoods/' + this.id)
           .then(response => {
             this.datasNeighborhoods = response.data.data;
             for (let i = 0; i <= this.datasNeighborhoods.length - 1; i++) {
@@ -241,11 +241,11 @@
 
       getNumber() {
         if (this.id <= 81 && this.id >= 1) {
-          this.url = "https://rocky-reef-05857.herokuapp.com/api/v0/phones/id?province_id=" + this.id;
+          this.url = "https://api.covidacil.com/api/v0/phones/id?province_id=" + this.id;
         } else if (this.id <= 2103 && this.id >= 1101) {
-          this.url = "https://rocky-reef-05857.herokuapp.com/api/v0/phones/id?district_id=" + this.id;
+          this.url = "https://api.covidacil.com/api/v0/phones/id?district_id=" + this.id;
         } else {
-          this.url = "https://rocky-reef-05857.herokuapp.com/api/v0/phones/id?neighborhood_id=" + this.id;
+          this.url = "https://api.covidacil.com/api/v0/phones/id?neighborhood_id=" + this.id;
         }
         axios.get(this.url)
           .then(response => {
