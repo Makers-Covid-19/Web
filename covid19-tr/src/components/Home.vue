@@ -177,6 +177,7 @@
 
     watch: {
       province() {
+        this.optionsDistricts = [];
         for (let i = 0; i <= this.datasProvince.length - 1; i++) {
           if (this.datasProvince[i].name == this.province) {
             this.id = i;
@@ -249,7 +250,6 @@
         }
         axios.get(this.url)
           .then(response => {
-            console.log(response.data.data);
             this.datasGlobalPhone = response.data.data.globalPhones;
             this.datasMajorPhone = response.data.data.majorPhones;
             this.datasPublicPhone = response.data.data.publicPhones;
