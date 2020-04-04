@@ -1,30 +1,5 @@
 <template>
   <div id="app">
-    <!--    <div class="container">
-          <br><br>
-          <h1>Covid Acil!</h1>
-          <hr>
-          <label>İli Seç</label>
-          <v-select :options="optionsProvince" v-model="province" placeholder="Zorunlu"></v-select>
-          <br>
-          <label>İlçeyi Seç</label>
-          <v-select :options="optionsDistricts" v-model="districts" placeholder="Zorunlu Değil"></v-select>
-          <br>
-          <label>Mahalleyi Seç</label>
-          <v-select :options="optionsNeighborhoods" v-model="neighborhoods" placeholder="Zorunlu Değil"></v-select>
-          <br><br>
-          <div v-for="data in datasPhone">
-            <div class="card">
-              <a :href="`tel:+${ data.no }`">
-                <p>{{ data.name }}</p>
-                <p>{{ data.no }}</p>
-                <p>{{ data.category.name }}</p>
-                <p>{{ data.province.name }}</p>
-              </a>
-            </div>
-          </div>
-        </div>-->
-
     <div class="home-general">
       <div class=home-card>
         <section class="container-1">
@@ -42,6 +17,7 @@
             </select>
           </div>
         </section>
+        <router-link to="/about"><p class="about">About</p></router-link>
         <div class="container">
           <a class="card" href="tel:155">
             <div class="icon">
@@ -123,9 +99,6 @@
                 <p class="info-p">{{ data.name }}</p>
                 <p class="info2-p">{{ data.phone }}</p>
               </div>
-              <div class="card-number">
-                <p class="number-left" v-if="data.category">{{ data.category.name }}</p>
-              </div>
             </div>
           </a>
         </div>
@@ -138,9 +111,6 @@
               <div class="card-info">
                 <p class="info-p">{{ data.name }}</p>
                 <p class="info2-p">{{ data.phone }}</p>
-              </div>
-              <div class="card-number">
-                <p class="number-left" v-if="data.category">{{ data.category.name }}</p>
               </div>
             </div>
           </a>
@@ -260,5 +230,15 @@
 </script>
 
 <style scoped>
+  .about {
+    color: #f2f2f2;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+  }
 
+  .about:hover {
+    font-size: 26px;
+  }
 </style>

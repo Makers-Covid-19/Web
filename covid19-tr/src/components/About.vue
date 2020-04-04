@@ -3,7 +3,7 @@
     <div class="settings-general">
       <div class="settings-general-sm">
 
-        <p class="settings-title">Ayarlar</p>
+        <p class="settings-title">Hakkında</p>
 
         <div class="settings-share-div">
           <a class="share-a" href="#">Arkadaşlarınıza bizi tavsiye edin</a>
@@ -37,7 +37,10 @@
 
           <div class="settings-footer-right">
             <p>from</p>
-            <img src="../assets/icon_/right-footer.svg">
+            <a class="link" href="https://github.com/Makers-Covid-19">
+              <img class="gh" src="../assets/icon_/gh_Vector.png">
+              <img src="../assets/icon_/pandemi_savascilari.png">
+            </a>
           </div>
         </div>
 
@@ -54,5 +57,11 @@
 </script>
 
 <style scoped>
+  .gh {
+    position: absolute;
+  }
 
+  .link:hover{
+    background-color: #85e6fa;
+  }
 </style>
