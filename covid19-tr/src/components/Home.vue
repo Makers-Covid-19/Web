@@ -17,7 +17,7 @@
             </select>
           </div>
         </section>
-        <router-link to="/about"><p class="about">About</p></router-link>
+        <router-link to="/about"><p class="about">Hakkında</p></router-link>
         <div class="container">
           <a class="card" href="tel:155">
             <div class="icon">
@@ -117,6 +117,7 @@
         </div>
       </div>
     </div>
+    <router-link to="/privacy-policy"><p class="privacy">Pandemi Savaşçıları Gizlilik Politikası ve Kullanım Koşulları</p></router-link>
   </div>
 </template>
 
@@ -240,5 +241,13 @@
 
   .about:hover {
     font-size: 26px;
+  }
+
+  .privacy {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
   }
 </style>
