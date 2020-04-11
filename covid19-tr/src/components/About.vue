@@ -14,18 +14,24 @@
           <p class="settings-social-media-title">TAKİP EDİN</p>
           <p class="settings-social-media-title-thin">Ayvalık Yerel İnisiyatif</p>
           <div class="settings-social-media-icon">
-            <img src="../assets/icon_/social.svg">
-            <img src="../assets/icon_/Shape-2.svg">
-            <img src="../assets/icon_/insta.svg">
-            <img src="../assets/icon_/ws.svg">
+            <a href="https://www.facebook.com/ayvalikyerelinisiyatif" target="blank_">
+              <img src="../assets/icon_/social.svg">
+            </a>
+            <a href="https://twitter.com/ayvalikyerel" target="blank_">
+              <img src="../assets/icon_/Shape-2.svg">
+            </a>
+            <a href="https://www.instagram.com/ayvalikyerel/" target="blank_">
+              <img src="../assets/icon_/insta.svg">
+            </a>
           </div>
         </div>
 
         <div class="settings-social-media social-media-down">
           <p class="settings-social-media-title-thin">Ayvalık Yerel İnisiyatif</p>
           <div class="settings-social-media-icon">
-            <img src="../assets/icon_/social.svg">
-            <img src="../assets/icon_/ws.svg">
+            <a href="tel:05326682864">
+              <img src="../assets/icon_/ws.svg">
+            </a>
           </div>
         </div>
 
