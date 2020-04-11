@@ -18,6 +18,8 @@
           </div>
         </section>
         <router-link to="/about"><p class="about">Hakkında</p></router-link>
+        <a class="appLogo" href="https://apps.apple.com/tr/app/acil-numaralar-destek-hatlar%C4%B1/id1506957322" target="blank_"><img src="../assets/icon_/appstore.png"></a>
+
         <div class="container">
           <a class="card" href="tel:155">
             <div class="icon">
@@ -91,9 +93,9 @@
 
     <div class="section-down">
       <div class="number-section">
-        <p class="number-section-text">Ülke Geneli</p>
+        <p class="number-section-text" style="margin-top: 32%">Ülke Geneli</p>
         <div v-for="data in datasGlobalPhone">
-          <a :href="`tel:+${ data.phone }`">
+          <a :href="`tel:${ data.phone }`">
             <div class="section-down-card">
               <div class="card-info">
                 <p class="info-p">{{ data.name }}</p>
@@ -104,9 +106,9 @@
         </div>
       </div>
       <div class="country-section" v-if="datasMajorPhone">
-        <p class="country-section-text">Numaralar</p>
+        <p class="country-section-text" style="margin-top: 5%">Numaralar</p>
         <div v-for="data in datasMajorPhone">
-          <a :href="`tel:+${ data.phone }`">
+          <a :href="`tel:${ data.phone }`">
             <div class="section-down-card">
               <div class="card-info">
                 <p class="info-p">{{ data.name }}</p>
@@ -241,6 +243,13 @@
 
   .about:hover {
     font-size: 26px;
+  }
+
+  .appLogo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
   }
 
   .privacy {
