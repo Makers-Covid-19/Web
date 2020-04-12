@@ -65,6 +65,19 @@ select:focus {
   text-align: center;
 }
 
+.container-2 {
+
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 23px;
+  width: 276px;
+  height: 146px;
+  text-align: center;
+}
+
 .container-1 > .dropdown {
   display: flex;
   justify-content: center;
@@ -338,6 +351,7 @@ select:focus {
 .number-section {
   margin-left: 12px;
   margin-right: 12px;
+  margin-top: 100px;
 }
 
 p.number-section-text {
@@ -571,7 +585,7 @@ p.number-left {
 
 /* R E S P O N S I V E   F O R   W E B (settings-page)*/
 
-@media (min-width: 472px) {
+@media (min-width: 450px) {
   .settings-footer {
     justify-content: center;
   }
@@ -595,6 +609,13 @@ p.number-left {
   .settings-general-sm {
     margin: auto;
     max-width: 800px;
+  }
+
+  .number-section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
   }
 }
 
@@ -625,6 +646,7 @@ p.number-left {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 200px;
   }
 
   .country-section {
