@@ -102,6 +102,7 @@
               <div class="card-info">
                 <p class="info-p">{{ data.name }}</p>
                 <p class="info2-p">{{ data.phone }}</p>
+                <p class="info2-p">{{ data.category['name'] }}</p>
               </div>
             </div>
           </a>
@@ -115,6 +116,18 @@
               <div class="card-info">
                 <p class="info-p">{{ data.name }}</p>
                 <p class="info2-p">{{ data.phone }}</p>
+                <p class="">{{ data.category['name'] }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div v-for="data in datasPublicPhone">
+          <a :href="`tel:${ data.phone }`">
+            <div class="section-down-card">
+              <div class="card-info">
+                <p class="info-p">{{ data.name }}</p>
+                <p class="info2-p">{{ data.phone }}</p>
+                <p class="">{{ data.category['name'] }}</p>
               </div>
             </div>
           </a>
@@ -228,6 +241,7 @@
             this.datasGlobalPhone = response.data.data.globalPhones;
             this.datasMajorPhone = response.data.data.majorPhones;
             this.datasPublicPhone = response.data.data.publicPhones;
+            console.log(this.datasPublicPhone);
           });
       }
     }
