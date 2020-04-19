@@ -25,10 +25,10 @@
           </p><br>
           
           <p>
-          Pandemi Savaşçıları Gönüllü Yazılımcıları adına,
+            Pandemi Savaşçıları Gönüllü Yazılımcıları adına,
           </p><br>
           <p>
-          
+            <a href="tel:05326682864">İletişim Numarası</a>
           </p>
         </div> 
         <br><br><br><br><br>
